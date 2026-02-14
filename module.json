@@ -1,0 +1,11 @@
+{
+    "name": "Withdraw",
+    "alias": "withdraw",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Juzaweb\\Modules\\Withdraw\\Providers\\WithdrawServiceProvider"
+    ],
+    "files": []
+}
