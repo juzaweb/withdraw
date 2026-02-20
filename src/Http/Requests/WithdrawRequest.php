@@ -41,7 +41,7 @@ class WithdrawRequest extends FormRequest
         return $rules;
     }
 
-    public function withdraw()
+    public function withdraw(): Withdraw
     {
         $method = WithdrawMethod::find($this->input('method'));
         $user = $this->user();

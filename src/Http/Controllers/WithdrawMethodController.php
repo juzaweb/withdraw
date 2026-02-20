@@ -5,9 +5,9 @@ namespace Juzaweb\Modules\Withdraw\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Juzaweb\Modules\Core\Facades\Breadcrumb;
 use Juzaweb\Modules\Core\Http\Controllers\AdminController;
-use Juzaweb\Modules\Referral\Http\DataTables\WithdrawMethodsDataTable;
-use Juzaweb\Modules\Referral\Http\Requests\WithdrawMethodActionsRequest;
-use Juzaweb\Modules\Referral\Http\Requests\WithdrawMethodRequest;
+use Juzaweb\Modules\Withdraw\Http\DataTables\WithdrawMethodsDataTable;
+use Juzaweb\Modules\Withdraw\Http\Requests\WithdrawMethodActionsRequest;
+use Juzaweb\Modules\Withdraw\Http\Requests\WithdrawMethodRequest;
 use Juzaweb\Modules\Withdraw\Models\WithdrawMethod;
 
 class WithdrawMethodController extends AdminController
