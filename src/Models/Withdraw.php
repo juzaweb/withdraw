@@ -3,6 +3,7 @@
 namespace Juzaweb\Modules\Withdraw\Models;
 
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Juzaweb\Modules\Core\Models\Model;
 use Juzaweb\Modules\Core\Traits\HasAPI;
 use Juzaweb\Modules\Core\Traits\HasCodeWithMonth;
@@ -35,7 +36,7 @@ class Withdraw extends Model
         'meta' => 'array',
     ];
 
-    public function withdrawable()
+    public function withdrawable(): MorphTo
     {
         return $this->morphTo();
     }

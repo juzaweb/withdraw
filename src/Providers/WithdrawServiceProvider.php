@@ -10,12 +10,7 @@ class WithdrawServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
-        //
-        $this->booted(
-            function () {
-                $this->registerMenus();
-            }
-        );
+        $this->registerMenus();
     }
 
     public function register(): void
@@ -29,10 +24,6 @@ class WithdrawServiceProvider extends ServiceProvider
 
     protected function registerMenus(): void
     {
-        if (File::missing(storage_path('app/installed'))) {
-            return;
-        }
-
         Menu::make('withdraws-management', function () {
             return [
                 'title' => __('Withdraws'),
@@ -63,9 +54,9 @@ class WithdrawServiceProvider extends ServiceProvider
     protected function registerConfig(): void
     {
         $this->publishes([
-            __DIR__ . '/../config/withdraw.php' => config_path('withdraw.php'),
+            __DIR__ . '/../../config/withdraw.php' => config_path('withdraw.php'),
         ], 'withdraw-config');
-        $this->mergeConfigFrom(__DIR__ . '/../config/withdraw.php', 'withdraw');
+        $this->mergeConfigFrom(__DIR__ . '/../../config/withdraw.php', 'withdraw');
     }
 
     protected function registerTranslations(): void
