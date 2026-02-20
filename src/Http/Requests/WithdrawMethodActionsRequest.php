@@ -7,7 +7,7 @@ use Juzaweb\Modules\Core\Rules\AllExist;
 
 class WithdrawMethodActionsRequest extends FormRequest
 {
-    public function rules()
+    public function rules(): array
     {
         return [
             'action' => ['required'],
