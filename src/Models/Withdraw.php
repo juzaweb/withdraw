@@ -22,7 +22,7 @@ class Withdraw extends Model
     protected $fillable = [
         'withdrawable_id',
         'withdrawable_type',
-        'method',
+        'method_id',
         'amount',
         'type',
         'status',
@@ -39,5 +39,10 @@ class Withdraw extends Model
     public function withdrawable(): MorphTo
     {
         return $this->morphTo();
+    }
+
+    public function method()
+    {
+        return $this->belongsTo(WithdrawMethod::class, 'method_id', 'id');
     }
 }

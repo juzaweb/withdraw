@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('code', 20);
             $table->uuid('withdrawable_id');
             $table->string('withdrawable_type', 190);
-            $table->string('method');
+            $table->unsignedBigInteger('method_id');
             $table->decimal('amount', 16, 2);
             $table->string('status', 20)->index()->default('pending');
             $table->string('type', 50)->index();
