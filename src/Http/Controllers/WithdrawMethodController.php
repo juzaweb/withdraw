@@ -66,7 +66,7 @@ class WithdrawMethodController extends AdminController
         $model = DB::transaction(
             function () use ($request) {
                 $data = $request->validated();
-                $data['fields'] = collect($data['fields'])->values()->all();
+                $data['fields'] = collect($data['fields'] ?? [])->values()->all();
 
                 return WithdrawMethod::create($data);
             }
@@ -85,7 +85,7 @@ class WithdrawMethodController extends AdminController
         $model = DB::transaction(
             function () use ($request, $model) {
                 $data = $request->validated();
-                $data['fields'] = collect($data['fields'])->values()->all();
+                $data['fields'] = collect($data['fields'] ?? [])->values()->all();
 
                 $model->update($data);
 
