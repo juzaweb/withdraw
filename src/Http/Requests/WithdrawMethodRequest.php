@@ -19,7 +19,7 @@ class WithdrawMethodRequest extends FormRequest
 			'name' => ['required'],
             'description' => ['nullable', 'string'],
             'min_amount' => ['required', 'numeric', 'min:0'],
-            'fields' => ['required', 'array'],
+            'fields' => ['nullable', 'array'],
             'fields.*.label' => ['required', 'string'],
             'fields.*.name' => ['required', 'string', 'distinct', 'regex:/^[a-zA-Z_][a-zA-Z0-9_]*$/'],
 		];
