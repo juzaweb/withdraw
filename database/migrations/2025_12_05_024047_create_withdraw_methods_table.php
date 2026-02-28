@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->json('fields')->nullable();
             $table->decimal('min_amount', 16, 2)->default(0);
+            $table->boolean('active')->default(true);
             $table->datetimes();
         });
     }

@@ -17,10 +17,12 @@ class WithdrawMethod extends Model
         'description',
         'fields',
         'min_amount',
+        'active',
     ];
 
     protected $casts = [
         'fields' => 'array',
         'min_amount' => 'decimal:2',
+        'active' => 'boolean',
     ];
 }
