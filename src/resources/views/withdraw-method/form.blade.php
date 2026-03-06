@@ -29,7 +29,7 @@
                 <x-card title="{{ __('Fields') }}"
                         description="{{ __('Information the user needs to enter to withdraw money.') }}">
 
-                    <x-core::repeater name="fields"
+                    <x-core::repeater name="fields" :params="[]"
                        :items="$model->fields ?? []"
                        view="withdraw::withdraw-method.components.field-item">
                     </x-core::repeater>
